@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9uu有你有我足矣官网 - 9uu有你陪伴的互动社区与资源导航首页</title>
+    <meta name="description" content="9uu有你有我足矣官网，一个温馨的互动社区与资源导航平台。这里汇集了各类兴趣圈子、热门话题、实用工具与精选内容，倡导真诚分享与温暖陪伴。有你有我，彼此足矣。">
+    <meta name="keywords" content="9uu,有你有我足矣,9uu官网,互动社区,资源导航,兴趣圈子,陪伴社区">
+    <style>
+        /* ===== 全局基础样式 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f7f4f0;
+            color: #2d2a26;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== 顶部导航栏 ===== */
+        .site-header {
+            background: #fffdf9;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #eae5de;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-symbol {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #e86a5e, #c94b4b);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            color: #fff;
+            letter-spacing: -0.5px;
+            box-shadow: 0 2px 6px rgba(201, 75, 75, 0.2);
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2d2a26;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            color: #c94b4b;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        .main-nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #4a443e;
+            padding: 6px 2px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #c94b4b;
+            border-bottom-color: #c94b4b;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .btn-outline {
+            border: 1px solid #d6cec5;
+            background: transparent;
+            padding: 7px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #4a443e;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            border-color: #c94b4b;
+            color: #c94b4b;
+            background: rgba(201, 75, 75, 0.03);
+        }
+
+        .btn-solid {
+            background: #c94b4b;
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-solid:hover {
+            background: #ad3a3a;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: #2d2a26;
+            line-height: 1;
+            padding: 4px;
+        }
+
+        /* ===== Hero 首屏 ===== */
+        .hero {
+            background: linear-gradient(145deg, #fff8f2 0%, #fef0e6 100%);
+            border-bottom: 1px solid #f0e2d8;
+            padding: 60px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(201, 75, 75, 0.07) 0%, transparent 70%);
+            top: -120px;
+            right: -80px;
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(232, 106, 94, 0.06) 0%, transparent 70%);
+            bottom: -80px;
+            left: 10%;
+            border-radius: 50%;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-copy h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            line-height: 1.25;
+            color: #2d2a26;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
+
+        .hero-copy h1 .highlight {
+            color: #c94b4b;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .hero-copy h1 .highlight::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 2px;
+            width: 100%;
+            height: 10px;
+            background: rgba(201, 75, 75, 0.12);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: #5c554e;
+            margin-bottom: 30px;
+            max-width: 520px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(6px);
+            border-radius: 20px;
+            padding: 28px 26px;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .hero-card-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+            color: #2d2a26;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .hero-card-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: #4a443e;
+        }
+
+        .hero-card-list li .dot {
+            width: 8px;
+            height: 8px;
+            background: #e86a5e;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 24px;
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #2d2a26;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #8c837a;
+        }
+
+        /* ===== 板块通用 ===== */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 36px;
+            gap: 20px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #2d2a26;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 4px;
+            bottom: 4px;
+            width: 4px;
+            background: linear-gradient(180deg, #e86a5e, #c94b4b);
+            border-radius: 4px;
+        }
+
+        .section-sub {
+            color: #8c837a;
+            font-size: 0.95rem;
+            max-width: 300px;
+            text-align: right;
+        }
+
+        .more-link {
+            color: #c94b4b;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .more-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== 分类卡片 ===== */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            background: #fffdf9;
+            border-radius: 16px;
+            padding: 24px 20px;
+            border: 1px solid #ece5dc;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            text-align: center;
+        }
+
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+            border-color: #e0b3ad;
+        }
+
+        .category-icon {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .category-name {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #2d2a26;
+            margin-bottom: 6px;
+        }
+
+        .category-count {
+            font-size: 0.82rem;
+            color: #9a9188;
+        }
+
+        /* ===== 热门话题 / 内容列表 ===== */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .topic-list {
+            background: #fffdf9;
+            border-radius: 18px;
+            border: 1px solid #ece5dc;
+            overflow: hidden;
+        }
+
+        .topic-item {
+            padding: 18px 22px;
+            border-bottom: 1px solid #f2ece4;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: background 0.15s;
+        }
+
+        .topic-item:last-child {
+            border-bottom: none;
+        }
+
+        .topic-item:hover {
+            background: #faf6f1;
+        }
+
+        .topic-rank {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #e0d5ca;
+            width: 38px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .topic-rank.hot {
+            color: #c94b4b;
+        }
+
+        .topic-main {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .topic-title {
+            font-weight: 600;
+            color: #2d2a26;
+            font-size: 1rem;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .topic-meta {
+            font-size: 0.82rem;
+            color: #9a9188;
+            display: flex;
+            gap: 14px;
+        }
+
+        .topic-tag {
+            background: #f5e9e4;
+            color: #b34a3a;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        /* ===== 侧边栏 ===== */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .side-card {
+            background: #fffdf9;
+            border-radius: 18px;
+            border: 1px solid #ece5dc;
+            padding: 24px 22px;
+        }
+
+        .side-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #2d2a26;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .side-card h3 .emoji {
+            font-size: 1.2rem;
+        }
+
+        .side-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .side-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.92rem;
+            color: #4a443e;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #f0e5dc;
+        }
+
+        .side-list li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .side-list .num {
+            color: #c94b4b;
+            font-weight: 600;
+        }
+
+        .side-card .btn-solid {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .side-card .btn-outline {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        /* ===== 最新更新 ===== */
+        .update-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .update-card {
+            background: #fffdf9;
+            border-radius: 16px;
+            border: 1px solid #ece5dc;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .update-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.05);
+        }
+
+        .update-thumb {
+            height: 120px;
+            background: linear-gradient(120deg, #fce8df, #f5d5cc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.4rem;
+        }
+
+        .update-body {
+            padding: 18px 18px 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .update-body h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #2d2a26;
+        }
+
+        .update-body p {
+            font-size: 0.86rem;
+            color: #7c736b;
+            line-height: 1.5;
+            flex: 1;
+            margin-bottom: 12px;
+        }
+
+        .update-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #a39a90;
+        }
+
+        /* ===== 社区陪伴理念 ===== */
+        .value-section {
+            background: #fff8f2;
+            border-top: 1px solid #f0e2d8;
+            border-bottom: 1px solid #f0e2d8;
+            padding: 60px 0;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 20px 15px;
+        }
+
+        .value-icon {
+            font-size: 2.6rem;
+            margin-bottom: 14px;
+        }
+
+        .value-item h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2d2a26;
+        }
+
+        .value-item p {
+            color: #6b625a;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: #fffdf9;
+            border: 1px solid #ece5dc;
+            border-radius: 14px;
+            padding: 20px 22px;
+        }
+
+        .faq-item h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #2d2a26;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .faq-item h3::before {
+            content: "Q";
+            background: #f5e9e4;
+            color: #c94b4b;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .faq-item p {
+            color: #5c554e;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            padding-left: 32px;
+        }
+
+        /* ===== CTA ===== */
+        .cta-area {
+            background: linear-gradient(135deg, #2d2a26 0%, #3d3833 100%);
+            border-radius: 24px;
+            padding: 50px 40px;
+            text-align: center;
+            color: #f5ede6;
+            margin: 20px 0 10px;
+        }
+
+        .cta-area h2 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .cta-area p {
+            max-width: 520px;
+            margin: 0 auto 24px;
+            color: #cfc6bc;
+            font-size: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons .btn-solid {
+            background: #e86a5e;
+            font-size: 1rem;
+            padding: 12px 30px;
+        }
+
+        .cta-buttons .btn-solid:hover {
+            background: #c94b4b;
+        }
+
+        .cta-buttons .btn-outline {
+            border-color: #796e64;
+            color: #e8dfd6;
+        }
+
+        .cta-buttons .btn-outline:hover {
+            border-color: #e86a5e;
+            color: #e86a5e;
+            background: transparent;
+        }
+
+        /* ===== 页脚 ===== */
+        .site-footer {
+            background: #2d2a26;
+            color: #b5aca3;
+            padding: 50px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-brand .logo-text {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .footer-brand .logo-text span {
+            color: #e86a5e;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            max-width: 280px;
+        }
+
+        .footer-col h4 {
+            color: #f0e8e0;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul a {
+            font-size: 0.88rem;
+            color: #b5aca3;
+        }
+
+        .footer-col ul a:hover {
+            color: #e86a5e;
+        }
+
+        .footer-bottom {
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.82rem;
+            color: #8a8178;
+        }
+
+        .footer-bottom a {
+            color: #b5aca3;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 992px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .hero-card {
+                max-width: 100%;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .update-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+                margin-left: auto;
+            }
+
+            .header-actions {
+                gap: 10px;
+            }
+
+            .btn-outline {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+
+            .btn-solid {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+            }
+
+            .hero {
+                padding: 40px 0 36px;
+            }
+
+            .hero-copy h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .section-head {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .section-sub {
+                text-align: left;
+                max-width: 100%;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-area {
+                padding: 40px 24px;
+            }
+
+            .cta-area h2 {
+                font-size: 1.5rem;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .update-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 14px;
+            }
+
+            .header-inner {
+                height: 58px;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .header-actions .btn-outline {
+                display: none;
+            }
+
+            .hero-copy h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero-desc {
+                font-size: 1rem;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .stat-item {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-symbol">9u</div>
+                <div class="logo-text">9uu<span>有你有我足矣</span></div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">圈子</a></li>
+                    <li><a href="#">热门</a></li>
+                    <li><a href="#">资源</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-outline">登录</button>
+                <button class="btn-solid">加入我们</button>
+                <button class="menu-toggle" aria-label="菜单">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero 首屏 -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <h1>有你有我，<br><span class="highlight">彼此足矣</span></h1>
+                <p class="hero-desc">
+                    欢迎来到 9uu 有你有我足矣官网 —— 一个温暖、真诚、陪伴感十足的互动社区。
+                    我们相信，最好的陪伴来自每一个真实的你。在这里，找到同好，分享热爱，让每一次相遇都有意义。
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-solid">浏览热门圈子</a>
+                    <a href="#" class="btn-outline">了解更多</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">120+</div>
+                        <div class="stat-label">活跃圈子</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8.6k</div>
+                        <div class="stat-label">成员加入</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">温暖氛围</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-card-title">✨ 今日陪伴推荐</div>
+                <ul class="hero-card-list">
+                    <li><span class="dot"></span>晚间闲聊 · 一起聊聊今天的趣事</li>
+                    <li><span class="dot"></span>读书共读 · 本周共读《人间值得》</li>
+                    <li><span class="dot"></span>兴趣小组 · 摄影爱好者征集作品</li>
+                    <li><span class="dot"></span>互助问答 · 新成员指南与帮助</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分类导航 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">热门圈子分类</h2>
+                <span class="section-sub">找到属于你的那片小天地</span>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">🎨</div>
+                    <div class="category-name">兴趣创作</div>
+                    <div class="category-count">绘画 · 写作 · 手工</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎮</div>
+                    <div class="category-name">游戏同好</div>
+                    <div class="category-count">手游 · 端游 · 桌游</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">📚</div>
+                    <div class="category-name">学习成长</div>
+                    <div class="category-count">读书 · 外语 · 技能</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💬</div>
+                    <div class="category-name">情感倾诉</div>
+                    <div class="category-count">树洞 · 交友 · 互助</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门话题 + 侧边栏 -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">本周热议话题</h2>
+                <a href="#" class="more-link">查看全部 →</a>
+            </div>
+            <div class="content-grid">
+                <!-- 左侧热门列表 -->
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-rank hot">1</div>
+                        <div class="topic-main">
+                            <div class="topic-title">你心中“有你有我”最温暖的瞬间是什么？</div>
+                            <div class="topic-meta">
+                                <span>💬 328 讨论</span>
+                                <span>❤️ 1.2k 赞同</span>
+                            </div>
+                        </div>
+                        <span class="topic-tag">热门</span>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-rank hot">2</div>
+                        <div class="topic-main">
+                            <div class="topic-title">9uu成员自发组织的线上读书会，欢迎加入</div>
+                            <div class="topic-meta">
+                                <span>💬 156 讨论</span>
+                                <span>❤️ 890 赞同</span>
+                            </div>
+                        </div>
+                        <span class="topic-tag">活动</span>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-rank hot">3</div>
+                        <div class="topic-main">
+                            <div class="topic-title">新人报到帖：晒出你的第一个自我介绍</div>
+                            <div class="topic-meta">
+                                <span>💬 412 讨论</span>
+                                <span>❤️ 2.1k 赞同</span>
+                            </div>
+                        </div>
+                        <span class="topic-tag">迎新</span>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-rank">4</div>
+                        <div class="topic-main">
+                            <div class="topic-title">每日打卡：今天你对自己好一点了吗？</div>
+                            <div class="topic-meta">
+                                <span>💬 98 讨论</span>
+                                <span>❤️ 567 赞同</span>
+                            </div>
+                        </div>
+                        <span class="topic-tag">日常</span>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-rank">5</div>
+                        <div class="topic-main">
+                            <div class="topic-title">一起聊聊那些陪伴我们成长的音乐和电影</div>
+                            <div class="topic-meta">
+                                <span>💬 143 讨论</span>
+                                <span>❤️ 734 赞同</span>
+                            </div>
+                        </div>
+                        <span class="topic-tag">休闲</span>
+                    </div>
+                </div>
+
+                <!-- 右侧边栏 -->
+                <aside class="sidebar">
+                    <div class="side-card">
+                        <h3><span class="emoji">🔥</span> 活跃成员</h3>
+                        <ul class="side-list">
+                            <li><span>温暖的小太阳</span><span class="num">Lv.8</span></li>
+                            <li><span>清风徐来</span><span class="num">Lv.7</span></li>
+                            <li><span>夜航星</span><span class="num">Lv.6</span></li>
+                            <li><span>橘子汽水</span><span class="num">Lv.6</span></li>
+                            <li><span>慢半拍</span><span class="num">Lv.5</span></li>
+                        </ul>
+                    </div>
+                    <div class="side-card">
+                        <h3><span class="emoji">📢</span> 社区公告</h3>
+                        <ul class="side-list">
+                            <li><span>新版规发布</span><span class="num">置顶</span></li>
+                            <li><span>9uu周年庆筹备</span><span class="num">热</span></li>
+                            <li><span>招募版主</span><span class="num">新</span></li>
+                        </ul>
+                        <button class="btn-solid">发布动态</button>
+                        <button class="btn-outline">意见反馈</button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新更新推荐 -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">最新精选内容</h2>
+                <a href="#" class="more-link">更多更新 →</a>
+            </div>
+            <div class="update-grid">
+                <div class="update-card">
+                    <div class="update-thumb">🌙</div>
+                    <div class="update-body">
+                        <h3>深夜电台 · 那些治愈的声音</h3>
+                        <p>成员们推荐的治愈系播客和音乐，陪你度过每一个需要陪伴的夜晚。</p>
+                        <div class="update-footer">
+                            <span>📅 2小时前</span>
+                            <span>👤 夜航星</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="update-card">
+                    <div class="update-thumb">📖</div>
+                    <div class="update-body">
+                        <h3>共读计划：《你当像鸟飞往你的山》</h3>
+                        <p>本周共读书目已确定，欢迎在评论区留下你的读书笔记与感受。</p>
+                        <div class="update-footer">
+                            <span>📅 5小时前</span>
+                            <span>👤 清风徐来</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="update-card">
+                    <div class="update-thumb">✍️</div>
+                    <div class="update-body">
+                        <h3>成员原创 · 诗歌与短句接龙</h3>
+                        <p>用文字表达心情，接龙创作正在进行中，期待你的神来之笔。</p>
+                        <div class="update-footer">
+                            <span>📅 8小时前</span>
+                            <span>👤 橘子汽水</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社区理念 -->
+    <section class="value-section">
+        <div class="container">
+            <div class="section-head" style="margin-bottom: 20px;">
+                <h2 class="section-title">关于“有你有我足矣”</h2>
+                <span class="section-sub">我们倡导的理念</span>
+            </div>
+            <div class="value-grid">
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <h3>真诚陪伴</h3>
+                    <p>不追求虚假的热闹，只愿在需要的时候，有人愿意倾听、回应和陪伴。</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🌈</div>
+                    <h3>多元包容</h3>
+                    <p>尊重每一种兴趣、观点和生活方式，这里欢迎所有真诚的个体。</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🌱</div>
+                    <h3>共同成长</h3>
+                    <p>在交流中互相启发，在分享中彼此滋养，一起成为更好的人。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">常见问题</h2>
+                <span class="section-sub">或许能帮到你</span>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>9uu是一个什么样的社区？</h3>
+                    <p>9uu有你有我足矣是一个以陪伴、交流和兴趣分享为核心的线上社区。成员来自不同背景，但都认同真诚温暖的人际互动。你可以找到各类话题圈子、参与讨论、发布动态或只是安静地浏览。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>如何加入9uu社区？</h3>
+                    <p>点击页面右上角的“加入我们”按钮，完成简单的注册流程即可。注册后建议先浏览“新人报到”板块，介绍一下自己，会更容易融入这个温暖的大家庭。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>社区有哪些规则需要遵守？</h3>
+                    <p>最基本的准则是相互尊重、友善表达。严禁人身攻击、广告骚扰和违法信息。具体细则可以在“社区公告”中查看完整的版规说明。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>我可以在这里发起自己的兴趣圈子吗？</h3>
+                    <p>当然可以。当你在现有圈子中找不到同好时，可以申请创建新圈子。我们鼓励成员主动发起有意义的主题，只要内容健康、有人响应，就能得到支持。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 区域 -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="cta-area">
+                <h2>与我们一起，让陪伴发生</h2>
+                <p>无论你是寻找同好、渴望倾诉，还是只想在忙碌之余有一个可以放松的地方，9uu都欢迎你的到来。</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-solid">立即加入 9uu</a>
+                    <a href="#" class="btn-outline">先逛逛看看</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo-text">9uu<span>有你有我足矣</span></div>
+                    <p>一个温暖有爱的线上社区，记录每一次真诚的相遇与陪伴。有你有我，彼此足矣。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">热门圈子</a></li>
+                        <li><a href="#">最新动态</a></li>
+                        <li><a href="#">新人报到</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社区支持</h4>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">版规说明</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">联系管理组</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情链接</h4>
+                    <ul>
+                        <li><a href="#">9uu博客</a></li>
+                        <li><a href="#">资源导航</a></li>
+                        <li><a href="#">成员作品集</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 9uu有你有我足矣官网 · 用心陪伴，真诚分享 · <a href="#">隐私政策</a> · <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 简单交互：移动端菜单展开 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggle = document.querySelector('.menu-toggle');
+            var nav = document.querySelector('.main-nav');
+            if (toggle && nav) {
+                toggle.addEventListener('click', function() {
+                    if (nav.style.display === 'flex') {
+                        nav.style.display = 'none';
+                    } else {
+                        nav.style.display = 'flex';
+                        nav.style.flexDirection = 'column';
+                        nav.style.position = 'absolute';
+                        nav.style.top = '58px';
+                        nav.style.left = '0';
+                        nav.style.right = '0';
+                        nav.style.background = '#fffdf9';
+                        nav.style.padding = '16px 24px';
+                        nav.style.boxShadow = '0 8px 20px rgba(0,0,0,0.06)';
+                        nav.style.borderBottom = '1px solid #ece5dc';
+                        nav.style.zIndex = '99';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+                              </html>
