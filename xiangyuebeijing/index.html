@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相约北京-首都文化旅行与城市活动指南</title>
+    <meta name="description" content="相约北京，发现首都之美。我们提供北京文化场馆、热门景点、演出展览、城市漫步路线及实用旅行攻略，助您深度感受古都魅力与现代活力。">
+    <meta name="keywords" content="相约北京,北京旅游,北京攻略,北京文化,北京演出,北京展览,城市漫步,周末去哪儿">
+    <link rel="stylesheet" href="data:text/css;base64,LnRlc3R7fQ==">
+    <style>
+        /* ===== 全局基础样式 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f8f6f2;
+            color: #2c2a26;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul, ol {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== 头部 ===== */
+        .site-header {
+            background: linear-gradient(135deg, #7a1e1e 0%, #a83a2f 100%);
+            color: #fff;
+            padding: 18px 0;
+            border-bottom: 4px solid #d4b48c;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo-area h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            line-height: 1.2;
+        }
+        .logo-area p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: 4px;
+            letter-spacing: 1px;
+        }
+        .header-contact {
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 16px;
+            border-radius: 30px;
+        }
+        .header-contact span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ===== 导航 ===== */
+        .main-nav {
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e8e0d4;
+        }
+        .nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .nav-list a {
+            display: block;
+            padding: 16px 24px;
+            font-weight: 500;
+            color: #3d3a36;
+            border-bottom: 3px solid transparent;
+            transition: all 0.25s;
+            font-size: 1rem;
+        }
+        .nav-list a:hover, .nav-list a.active {
+            color: #a83a2f;
+            border-bottom-color: #a83a2f;
+            background-color: #fdf9f3;
+        }
+
+        /* ===== Hero 首屏 ===== */
+        .hero {
+            background: linear-gradient(115deg, #e8ddd0 0%, #f5efe7 40%, #e6d6c8 100%);
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "京";
+            position: absolute;
+            right: -20px;
+            top: -40px;
+            font-size: 280px;
+            color: rgba(168, 58, 47, 0.05);
+            font-weight: 700;
+            line-height: 1;
+            pointer-events: none;
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-text h2 {
+            font-size: 2.8rem;
+            line-height: 1.25;
+            color: #5c1a14;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .hero-text h2 span {
+            color: #a83a2f;
+            border-bottom: 3px solid #d4b48c;
+            padding-bottom: 4px;
+        }
+        .hero-text p {
+            font-size: 1.15rem;
+            color: #5f584e;
+            margin-bottom: 30px;
+            max-width: 90%;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.25s;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: #a83a2f;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(168,58,47,0.25);
+        }
+        .btn-primary:hover {
+            background-color: #8d2d24;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(168,58,47,0.3);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #a83a2f;
+            color: #a83a2f;
+        }
+        .btn-outline:hover {
+            background: #a83a2f;
+            color: #fff;
+        }
+        .hero-info-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            border-left: 6px solid #d4b48c;
+        }
+        .hero-info-card h3 {
+            font-size: 1.3rem;
+            color: #5c1a14;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .hero-info-card ul li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee2d4;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1rem;
+        }
+        .hero-info-card ul li:last-child {
+            border-bottom: none;
+        }
+        .hero-info-card ul li strong {
+            color: #a83a2f;
+            font-weight: 600;
+        }
+
+        /* ===== 通用区块 ===== */
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: #5c1a14;
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #d4b48c;
+            border-radius: 3px;
+        }
+        .section-title p {
+            color: #7a7266;
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== 特色卡片 ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 22px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #eee5da;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+            border-color: #d4b48c;
+        }
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #a83a2f, #d4b48c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #fff;
+            box-shadow: 0 6px 16px rgba(168,58,47,0.2);
+        }
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #3d3a36;
+        }
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #7a7266;
+            line-height: 1.5;
+        }
+
+        /* ===== 活动列表区块 ===== */
+        .event-section {
+            background-color: #fff;
+            border-top: 3px solid #f0e8de;
+            border-bottom: 3px solid #f0e8de;
+        }
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        .event-card {
+            display: flex;
+            background: #fcfaf7;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #eee5da;
+            transition: all 0.3s;
+        }
+        .event-card:hover {
+            box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+        }
+        .event-date {
+            background: #a83a2f;
+            color: #fff;
+            min-width: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 8px;
+            text-align: center;
+        }
+        .event-date .month {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .event-date .day {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .event-info {
+            padding: 20px;
+            flex: 1;
+        }
+        .event-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #2c2a26;
+        }
+        .event-info p {
+            font-size: 0.9rem;
+            color: #7a7266;
+            margin-bottom: 12px;
+        }
+        .event-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: #a83a2f;
+            font-weight: 500;
+        }
+
+        /* ===== 文化场馆 ===== */
+        .venue-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .venue-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid #eee5da;
+            transition: all 0.3s;
+        }
+        .venue-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .venue-tag {
+            display: inline-block;
+            background: #f3e9dd;
+            color: #a83a2f;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        .venue-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .venue-card p {
+            font-size: 0.9rem;
+            color: #6b645a;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .venue-link {
+            color: #a83a2f;
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .venue-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== 城市漫步路线 ===== */
+        .route-section {
+            background: linear-gradient(180deg, #f8f6f2 0%, #efe8de 100%);
+        }
+        .route-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .route-item {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid #d4b48c;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+        }
+        .route-item .step {
+            font-size: 3rem;
+            font-weight: 700;
+            color: rgba(168,58,47,0.08);
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            line-height: 1;
+        }
+        .route-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #5c1a14;
+        }
+        .route-item ul li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .route-item ul li::before {
+            content: "→";
+            color: #a83a2f;
+            font-weight: 700;
+        }
+
+        /* ===== 实用攻略 ===== */
+        .tips-section {
+            background: #fff;
+        }
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .tip-box {
+            background: #f9f6f1;
+            border-radius: 14px;
+            padding: 24px;
+            border-left: 4px solid #d4b48c;
+        }
+        .tip-box h3 {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            color: #a83a2f;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .tip-box p {
+            font-size: 0.95rem;
+            color: #554e45;
+            line-height: 1.7;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-section {
+            background: #efe8de;
+        }
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+        }
+        .faq-item h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: #5c1a14;
+            position: relative;
+            padding-left: 32px;
+        }
+        .faq-item h3::before {
+            content: "Q";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 24px;
+            height: 24px;
+            background: #a83a2f;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        .faq-item p {
+            font-size: 0.98rem;
+            color: #5f584e;
+            padding-left: 32px;
+            line-height: 1.7;
+        }
+
+        /* ===== CTA ===== */
+        .cta-band {
+            background: linear-gradient(135deg, #5c1a14, #a83a2f);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .cta-band h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .cta-band p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .cta-band .btn-primary {
+            background: #fff;
+            color: #a83a2f;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            font-size: 1.05rem;
+            padding: 14px 36px;
+        }
+        .cta-band .btn-primary:hover {
+            background: #f3e9dd;
+            transform: translateY(-2px);
+        }
+
+        /* ===== 页脚 ===== */
+        .site-footer {
+            background: #2c2a26;
+            color: #b8b0a4;
+            padding: 50px 0 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+        .footer-brand h3 {
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 90%;
+        }
+        .footer-col h4 {
+            color: #e8ddd0;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .venue-grid, .route-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+            .event-grid, .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-list a {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+            .section {
+                padding: 40px 0;
+            }
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+            .venue-grid, .route-list {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-info-card {
+                padding: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-text h2 {
+                font-size: 1.7rem;
+            }
+            .logo-area h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <!-- ===== 头部 ===== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <h1>相约北京</h1>
+                <p>MEETING BEIJING · 古都新韵，相逢有时</p>
+            </div>
+            <div class="header-contact">
+                <span>📍 中国·北京</span>
+                <span>☀️ 四季皆宜</span>
+                <span>📞 010-1234 5678</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== 导航 ===== -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#events">文化活动</a></li>
+                <li><a href="#venues">文化场馆</a></li>
+                <li><a href="#routes">城市漫步</a></li>
+                <li><a href="#tips">实用攻略</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== 首屏 Hero ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>在最好的时节<br><span>与北京相遇</span></h2>
+                    <p>从紫禁城的红墙到胡同里的烟火，从国家大剧院的旋律到798的艺术灵感。我们为您梳理这座城市最值得奔赴的文化现场与旅行灵感，让每一次"相约北京"都成为美好记忆。</p>
+                    <div class="hero-buttons">
+                        <a href="#events" class="btn btn-primary">探索近期活动</a>
+                        <a href="#routes" class="btn btn-outline">查看漫步路线</a>
+                    </div>
+                </div>
+                <div class="hero-info-card">
+                    <h3>📅 本季推荐</h3>
+                    <ul>
+                        <li><span>🖼️ 故宫·春日特展</span> <strong>进行中</strong></li>
+                        <li><span>🎭 国家大剧院·歌剧节</span> <strong>4月-6月</strong></li>
+                        <li><span>🌸 玉渊潭樱花季</span> <strong>3月底-4月中</strong></li>
+                        <li><span>🎵 北京国际音乐节</span> <strong>10月</strong></li>
+                        <li><span>🏛️ 中轴线申遗特展</span> <strong>常设</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 特色亮点 ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>为什么相约北京</h2>
+                <p>一座城市，三千年的厚度，每一面都值得细细品味</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏛️</div>
+                    <h3>千年古都</h3>
+                    <p>故宫、天坛、颐和园……世界文化遗产密集，历史底蕴无可替代。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h3>艺术现场</h3>
+                    <p>国家大剧院、人艺、Livehouse 与实验剧场，每日上演多元演出。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍜</div>
+                    <h3>京味生活</h3>
+                    <p>胡同、四合院、铜锅涮肉与豆汁焦圈，地道北京味在街头巷尾。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌳</div>
+                    <h3>四季风物</h3>
+                    <p>春樱夏荷秋银杏冬雪，每个季节都有独特的城市风景线。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 近期活动 ===== -->
+    <section class="section event-section" id="events">
+        <div class="container">
+            <div class="section-title">
+                <h2>近期值得奔赴的活动</h2>
+                <p>演出、展览、市集与城市节庆，让每一次相遇都有新鲜事</p>
+            </div>
+            <div class="event-grid">
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="month">2025年</span>
+                        <span class="day">5月</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>北京当代·艺术博览会</h3>
+                        <p>汇聚国内外当代艺术画廊与艺术家，呈现最具活力的艺术现场。</p>
+                        <div class="event-meta">
+                            <span>📍 全国农业展览馆</span>
+                            <span>🎫 需购票</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="month">2025年</span>
+                        <span class="day">5月</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>国家大剧院·歌剧节</h3>
+                        <p>多部中外经典歌剧轮番上演，歌唱家与交响乐团联袂呈现听觉盛宴。</p>
+                        <div class="event-meta">
+                            <span>📍 国家大剧院</span>
+                            <span>🎫 多档票价</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="month">2025年</span>
+                        <span class="day">6月</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>北京国际设计周·前门分会场</h3>
+                        <p>老城更新与创意设计碰撞，胡同里的展览与工作坊免费开放。</p>
+                        <div class="event-meta">
+                            <span>📍 前门及周边</span>
+                            <span>🎫 部分免费</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="month">2025年</span>
+                        <span class="day">6月</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>雁栖湖·国际会都音乐节</h3>
+                        <p>山水之间的户外音乐体验，融合流行、民谣与电子等多种风格。</p>
+                        <div class="event-meta">
+                            <span>📍 怀柔雁栖湖</span>
+                            <span>🎫 需购票</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 文化场馆推荐 ===== -->
+    <section class="section" id="venues">
+        <div class="container">
+            <div class="section-title">
+                <h2>京城文化地标</h2>
+                <p>这些场馆，构成了北京的精神骨骼与艺术脉络</p>
+            </div>
+            <div class="venue-grid">
+                <div class="venue-card">
+                    <span class="venue-tag">博物馆</span>
+                    <h3>故宫博物院</h3>
+                    <p>明清两代皇宫，世界现存规模最大的木结构古建筑群。建议提前预约，留足半天时间细品。</p>
+                    <a href="#" class="venue-link">了解更多 →</a>
+                </div>
+                <div class="venue-card">
+                    <span class="venue-tag">艺术殿堂</span>
+                    <h3>国家大剧院</h3>
+                    <p>长安街上的"水上明珠"，歌剧院、音乐厅、戏剧场全年上演世界级演出。</p>
+                    <a href="#" class="venue-link">了解更多 →</a>
+                </div>
+                <div class="venue-card">
+                    <span class="venue-tag">当代艺术</span>
+                    <h3>798艺术区</h3>
+                    <p>包豪斯风格厂房改造的艺术聚落，画廊、工作室与艺术商店云集。</p>
+                    <a href="#" class="venue-link">了解更多 →</a>
+                </div>
+                <div class="venue-card">
+                    <span class="venue-tag">城市公园</span>
+                    <h3>天坛公园</h3>
+                    <p>明清帝王祭天祈谷之所，祈年殿的蓝色琉璃瓦是北京的经典名片。</p>
+                    <a href="#" class="venue-link">了解更多 →</a>
+                </div>
+                <div class="venue-card">
+                    <span class="venue-tag">城市更新</span>
+                    <h3>首钢园</h3>
+                    <p>老钢铁厂焕新为冬奥与科幻地标，高炉、滑雪大跳台与书店咖啡厅共存。</p>
+                    <a href="#" class="venue-link">了解更多 →</a>
+                </div>
+                <div class="venue-card">
+                    <span class="venue-tag">文化街区</span>
+                    <h3>北京坊</h3>
+                    <p>前门大栅栏旁的新中式街区，劝业场旧址里藏着书店、展览与好店。</p>
+                    <a href="#" class="venue-link">了解更多 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 城市漫步路线 ===== -->
+    <section class="section route-section" id="routes">
+        <div class="container">
+            <div class="section-title">
+                <h2>推荐城市漫步路线</h2>
+                <p>用脚步丈量北京，发现地图之外的风景</p>
+            </div>
+            <div class="route-list">
+                <div class="route-item">
+                    <span class="step">01</span>
+                    <h3>中轴线经典线</h3>
+                    <ul>
+                        <li>永定门（起点）</li>
+                        <li>天坛公园（祈年殿）</li>
+                        <li>前门大街·北京坊</li>
+                        <li>天安门广场</li>
+                        <li>故宫午门（终点）</li>
+                    </ul>
+                    <p style="margin-top:15px;font-size:0.9rem;color:#a83a2f;">全程约7公里 · 建议半天</p>
+                </div>
+                <div class="route-item">
+                    <span class="step">02</span>
+                    <h3>胡同烟火线</h3>
+                    <ul>
+                        <li>什刹海（荷花市场）</li>
+                        <li>烟袋斜街</li>
+                        <li>南锣鼓巷主街</li>
+                        <li>东棉花胡同</li>
+                        <li>五道营胡同（终点）</li>
+                    </ul>
+                    <p style="margin-top:15px;font-size:0.9rem;color:#a83a2f;">全程约5公里 · 建议3小时</p>
+                </div>
+                <div class="route-item">
+                    <span class="step">03</span>
+                    <h3>艺术西线</h3>
+                    <ul>
+                        <li>今日美术馆（朝阳）</li>
+                        <li>侨福芳草地</li>
+                        <li>三里屯太古里</li>
+                        <li>UCCA尤伦斯</li>
+                        <li>798艺术区（终点）</li>
+                    </ul>
+                    <p style="margin-top:15px;font-size:0.9rem;color:#a83a2f;">艺术与时尚融合 · 建议全天</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 实用攻略 ===== -->
+    <section class="section tips-section" id="tips">
+        <div class="container">
+            <div class="section-title">
+                <h2>相约北京 · 实用攻略</h2>
+                <p>行前准备与在地小贴士，让旅程更从容</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-box">
+                    <h3>🚇 交通出行</h3>
+                    <p>地铁覆盖全市主要景点，下载"亿通行"App 扫码乘车。高峰期（7-9点，17-19点）地面交通拥堵，建议优先地铁。骑行共享单车逛胡同是不错的选择。</p>
+                </div>
+                <div class="tip-box">
+                    <h3>🎫 预约须知</h3>
+                    <p>故宫、国博等热门场馆需提前7天在官方微信公众号预约。部分场馆周一闭馆，出行前务必查询开放时间，并携带身份证原件。</p>
+                </div>
+                <div class="tip-box">
+                    <h3>🗓️ 最佳时节</h3>
+                    <p>4-5月春花烂漫、9-10月秋高气爽，是最舒适的旅行季节。夏季炎热多雨，冬季干冷但雪后故宫别有韵味，且游客相对较少。</p>
+                </div>
+                <div class="tip-box">
+                    <h3>🍲 美食指南</h3>
+                    <p>除了烤鸭和涮肉，推荐尝试护国寺小吃（豌豆黄、驴打滚）、牛街清真小吃街，以及藏在胡同里的家常菜小馆。老字号建议错峰用餐。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+                <p>关于相约北京，您可能想了解的</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>到北京旅行需要准备哪些证件？</h3>
+                    <p>中国大陆居民携带身份证即可。参观故宫、国家博物馆等需实名预约，人证合一验证。港澳台同胞及外国游客需携带有效通行证或护照，部分场所需提前办理预约。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>如何避开热门景点的人流高峰？</h3>
+                    <p>建议选择工作日出行，早晨开馆时段（8:30-10:00）或下午闭馆前1-2小时参观。故宫等热门场馆可优先选择钟表馆、珍宝馆等相对小众的区域。淡季（11月至次年3月）体验更佳。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>北京有哪些适合亲子同游的地方？</h3>
+                    <p>中国科技馆（儿童科学乐园）、北京自然博物馆、国家动物博物馆、北京动物园（含海洋馆）都很受亲子家庭欢迎。另外，奥林匹克森林公园、朝阳公园也有开阔的户外空间。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>如何规划一次深度的文化旅行？</h3>
+                    <p>除了标志性景点，建议安排：看一场京剧或昆曲（长安大戏院、正乙祠戏楼）、逛一次潘家园或琉璃厂、听一场相声（德云社、嘻哈包袱铺）。提前查阅各场馆演出日历，将文化体验穿插在行程中。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>北京的气候如何？什么时候去最合适？</h3>
+                    <p>春秋两季（4-5月、9-10月）气温舒适，风景最美。夏季高温多雨，需防暑防晒；冬季干冷且偶有雾霾，但室内暖气充足，且可欣赏雪景。出行前建议查看天气预报及空气质量指数。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-band" id="contact">
+        <div class="container">
+            <h2>准备好与北京相约了吗？</h2>
+            <p>获取最新活动资讯与专属旅行建议</p>
+            <a href="#" class="btn btn-primary">📩 订阅城市指南</a>
+        </div>
+    </section>
+
+    <!-- ===== 页脚 ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>相约北京</h3>
+                    <p>专注于北京城市文化与旅行体验的内容平台。我们相信，每一次与北京的相遇，都值得被认真对待。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#events">近期活动</a></li>
+                        <li><a href="#venues">文化场馆</a></li>
+                        <li><a href="#routes">漫步路线</a></li>
+                        <li><a href="#tips">旅行攻略</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>城市伙伴</h4>
+                    <ul>
+                        <li><a href="#">北京文旅局</a></li>
+                        <li><a href="#">故宫博物院</a></li>
+                        <li><a href="#">国家大剧院</a></li>
+                        <li><a href="#">北京中轴线</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系交流</h4>
+                    <ul>
+                        <li>📧 hello@meetbeijing.com</li>
+                        <li>📍 北京市东城区</li>
+                        <li>🕐 周一至周五 9:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 相约北京 · 京ICP备00000000号 · 尊重原创，转载请联系</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
